@@ -2,7 +2,10 @@
 books = ["Benim Adım Kırmızı","Şeker Portakalı","Satranç", "Tutunamayanlar"]
 print(books[0])
 
+#list'in her elemanı farklı tipte olabilir.
 prouct_infos = ["Güneş Gözlüğü","Aksesuar",1500,True]
+
+
 print(prouct_infos)
 # Liste İşlemleri
 print(" --------------- Liste İşlemleri -----------------")
