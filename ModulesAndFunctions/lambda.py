@@ -54,3 +54,43 @@ print(carpim)
 words = ["python","çok","güçlü","ve","esnek"]
 sentence = reduce(lambda x,y:x+ " "+y,words)
 print(sentence)
+
+## zip kullanımı:
+isimler = ["Ahmet","Türkay","Filiz"]
+maaslar = [100000, 75000, 90000]
+departmanlar = ["IT","Pazarlama","Finans"]
+
+calisan_bilgileri = list(zip(isimler,maaslar,departmanlar))
+
+print(calisan_bilgileri)
+print(type(calisan_bilgileri))
+
+for isim, maas, departman in calisan_bilgileri:
+    print(f"{isim} {maas} {departman}")
+
+calisan_dict = dict(zip(isimler,maaslar))
+print(calisan_dict, type(calisan_dict))
+
+#enumerate (sıralama)
+print (enumerate(calisan_bilgileri,start=1))
+for calisan in enumerate(calisan_bilgileri, start=1):
+    print(f"{calisan[0]} {calisan[1][0]} ")
+
+# All() Tüm element üzerinde çalışan kriterler True ise
+numbers = [2,4,7,8,10]
+is_all_even= all(number % 2 == 0 for number in numbers)
+print("Hepsi çift mi?",is_all_even)
+
+project_criteria={
+    "budged_approved":True,
+    "tech_approved":True,
+    "availability":True,
+    "manager_approved":True
+}
+
+is_project_approved = all(project_criteria.values())
+if is_project_approved:
+    print("proje onaylandı")
+
+rand_nums = [1,2,3,5]
+any_even = any(num % 2 ==0 for num in rand_nums)
